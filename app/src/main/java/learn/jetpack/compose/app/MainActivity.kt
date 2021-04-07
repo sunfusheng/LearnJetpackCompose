@@ -3,18 +3,20 @@ package learn.jetpack.compose.app
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.clickable
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.padding
 import androidx.compose.material.Text
 import androidx.compose.material.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import learn.jetpack.compose.app.ui.theme.BackgroundCommonColor
 import learn.jetpack.compose.app.ui.theme.ComposeMaterialTheme
 import learn.jetpack.compose.app.ui.theme.PrimaryColor
+import learn.jetpack.compose.app.ui.view.CommonItemView
 
 class MainActivity : ComponentActivity() {
 
@@ -28,7 +30,7 @@ class MainActivity : ComponentActivity() {
 
 @Preview(showBackground = true)
 @Composable
-fun DefaultPreview() {
+fun DefaultHomePage() {
     HomePage()
 }
 
@@ -40,23 +42,16 @@ fun HomePage() {
                 backgroundColor = PrimaryColor,
                 title = { Text("Learn Jetpack Compose") }
             )
-            CommonItemView(title = "Test") {
+            Column(
+                modifier = Modifier
+                    .background(BackgroundCommonColor)
+                    .fillMaxWidth()
+                    .fillMaxHeight()
+            ) {
+                CommonItemView(title = "标题", topMargin = 20.dp) {
 
+                }
             }
         }
-    }
-}
-
-@Composable
-fun CommonItemView(title: String, onClick: () -> Unit) {
-    Column {
-        Text(
-            text = title,
-            modifier = Modifier
-                .clickable(onClick = onClick)
-                .padding(horizontal = 16.dp, vertical = 12.dp)
-                .fillMaxWidth(),
-
-            )
     }
 }

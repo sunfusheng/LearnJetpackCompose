@@ -8,7 +8,7 @@ import androidx.compose.runtime.Composable
 private val LightColor = lightColors(
     primary = PrimaryColor,
     primaryVariant = PrimaryColor,
-    secondary = PrimaryColor
+    secondary = PrimaryColor,
 )
 
 @Composable
@@ -17,6 +17,6 @@ fun ComposeMaterialTheme(content: @Composable() () -> Unit) {
         colors = LightColor,
         typography = Typography,
         shapes = Shapes,
-        content = content
+        content = content,
     )
 }
