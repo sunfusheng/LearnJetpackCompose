@@ -1,4 +1,4 @@
-package learn.jetpack.compose.app.ui.theme
+package learn.jetpack.compose.app.theme
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Shapes

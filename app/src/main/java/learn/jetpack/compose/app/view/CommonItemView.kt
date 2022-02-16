@@ -1,4 +1,4 @@
-package learn.jetpack.compose.app.ui.view
+package learn.jetpack.compose.app.view
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -13,7 +13,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import learn.jetpack.compose.app.ui.theme.Font1Color
+import learn.jetpack.compose.app.theme.Font1Color
 
 @Composable
 fun CommonItemView(title: String, topMargin: Dp = 0.dp, onClick: () -> Unit) {
